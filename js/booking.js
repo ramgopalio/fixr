@@ -15,7 +15,7 @@
 
       // Send a POST request to your Google Apps Script
       fetch(
-        "https://script.google.com/macros/s/AKfycbzA29vURSVA7n5TTnlxxtC43tCEtotSoLDfmC3ZwM_YLcR6vUQkrbD49viZs4DBHjja/exec",
+        "https://script.google.com/macros/s/AKfycbxGHlRJycFfIozJYlNyGaHcieuLHpRT0M0WQU63bsnoBoqd1pSheBsmQL9KLvmxeZpt/exec",
         {
           redirect: "follow",
           method: "POST",
@@ -43,22 +43,16 @@
           document.getElementById("submit-button").disabled = false;
           document.getElementById("form").reset();
 
-          // Redirect to appcode.html
           setTimeout(function () {
             document.getElementById("message").textContent = "";
             document.getElementById("message").style.display = "none";
-            window.location.href = "appcode.html";
           }, 2600);
         })
-
         .catch(function (error) {
           // Handle errors, you can display an error message here
           console.error(error);
           document.getElementById("message").textContent =
             "An error occurred while submitting the form.";
           document.getElementById("message").style.display = "block";
-          document.getElementById("message").style.backgroundColor = "red";
-          document.getElementById("message").style.color = "white";
-          document.getElementById("submit-button").disabled = false;
         });
     });
