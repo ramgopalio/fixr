@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+  />
+</head>
+
+<body>
+
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Booking</h1>
+    </div>
+  </div>
+</section>
+
+<form id="form" class="container m-4 pl-4" method="POST">
+  <div class="field">
+    <label class="label">Name*</label>
+    <div class="control">
+      <input
+              class="input"
+              type="text"
+              placeholder="Your Name"
+              name="Customer Name"
+      />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Mobile Number*</label>
+    <input
+            class="input"
+            type="text"
+            placeholder="Mobile Number"
+            name="Mobile"
+            required
+    />
+  </div>
+
+  <div class="field">
+    <label class="label">Email ID Send booking details to</label>
+    <div class="control">
+      <input
+              class="input"
+              type="email"
+              placeholder="Your Email"
+              name="Email"
+      />
+    </div>
+  </div>
+
+   <div class="field">
+    <label class="label">Address</label>
+    <div class="control">
+      <input
+        class="input"
+        type="text"
+        placeholder="address"
+          name="Address"
+      />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">When should the professional arrive?</label>
+    <div class="control">
+      <input
+              class="input"
+              type="date"
+              placeholder="Slot"
+              name="Slot"
+      />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Your Message here</label>
+    <div class="control">
+          <textarea
+                  class="textarea"
+                  placeholder="Please provide key problem details or requirements you'd like us to solve"
+                  name="Notes"
+          ></textarea>
+    </div>
+  </div>
+
+<!--  <div class="field">-->
+<!--    <label class="label">Agree to Terms</label>-->
+<!--    <div class="control">-->
+<!--      <label class="checkbox">-->
+<!--        <input type="checkbox" name="Agree To Terms" value="yes" /> I agree-->
+<!--        to the terms and conditions-->
+<!--      </label>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-primary" type="submit" id="submit-button">
+        Sign Up
+      </button>
+    </div>
+    <div class="control">
+      <button class="button is-danger">Cancel</button>
+    </div>
+  </div>
+</form>
+<div
+        id="message"
+        style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
+></div>
+
+<script src="js/booking.js"></script>
+
+</body>
+</html>
