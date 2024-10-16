@@ -1,10 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="form.css">
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
 </head>
 <body>
-$END$
+<form id="form" class="container m-4 pl-4" method="POST">
+
+    <div class="form-container">
+        <h2>Personal Information</h2>
+        <!--    <form>-->
+        <!--      <div class="form-group">-->
+        <!--        <label for="title">Title</label>-->
+        <!--        <select id="title" required>-->
+        <!--          <option value="mr">Mr</option>-->
+        <!--          <option value="mrs">Mrs</option>-->
+        <!--          <option value="ms">Ms</option>-->
+        <!--        </select>-->
+        <!--      </div>-->
+
+        <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+                <input
+                        class="input"
+                        type="text"
+                        placeholder="First Name"
+                        name="First Name"
+                        required
+                />
+            </div>
+        </div>
+
+
+
+        <div class="field">
+            <label class="label">Last Name</label>
+            <div class="control">
+                <input
+                        class="input"
+                        type="text"
+                        placeholder="Last Name"
+                        name="Last Name"
+                        required
+                />
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Date of Birth</label>
+            <div class="control">
+                <input
+                        class="input"
+                        type="date"
+                        placeholder="Your Date of Birth"
+                        name="DOB"
+                        required
+                />
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="lable">Age Policy Deviation</label>
+            <input type="checkbox" name="Age Policy Deviation" value="yes" required/>
+        </div>
+
+
+        <div class="field">
+            <label class="lable">Card Type Deviation</label>
+            <input type="checkbox" name="Card Type Deviation" value="yes" required/>
+        </div>
+
+        <div class="field">
+            <label class="lable">Form 60</label>
+            <input type="checkbox" name="Form 60" value="yes" required/>
+        </div>
+
+
+
+
+        <!--    <div class="form-group">-->
+        <!--      <label for="vvipCategory">Select VVIP Category</label>-->
+        <!--      <select id="vvipCategory">-->
+        <!--        <option value="vip1">VIP 1</option>-->
+        <!--        <option value="vip2">VIP 2</option>-->
+        <!--        <option value="vip3">VIP 3</option>-->
+        <!--      </select>-->
+        <!--    </div>-->
+
+
+        <!--     New fields-->
+        <!--    <div class="form-group">-->
+        <!--      <label for="nationality">Nationality</label>-->
+        <!--      <select id="nationality" required>-->
+        <!--        <option value="indian">Indian</option>-->
+        <!--        <option value="other">Other</option>-->
+        <!--      </select>-->
+        <!--    </div>-->
+
+
+        <div class="field">
+            <label class="label">Locality/Society</label>
+            <input
+                    class="input"
+                    type="text"
+                    placeholder="Locality/Society"
+                    name="Locality"
+                    required
+            />
+        </div>
+
+
+        <div class="field">
+            <label class="label">Address Line 2</label>
+            <input
+                    class="input"
+                    type="text"
+                    placeholder="Address Line 2"
+                    name="Address Line 2"
+                    required
+            />
+        </div>
+
+
+        <div class="field">
+            <label class="label">PIN Code</label>
+            <input
+                    class="input"
+                    type="text"
+                    placeholder="PIN Code"
+                    name="PIN Code"
+                    required
+            />
+        </div>
+
+        <div class="field">
+            <label class="lable">OCL Policy Deviation</label>
+            <input type="checkbox" name="OCL Policy Deviation" value="yes" required/>
+        </div>
+
+        <div class="field">
+            <label class="label">Residence City</label>
+            <input
+                    class="input"
+                    type="text"
+                    placeholder="Residence City"
+                    name="Residence City"
+                    required
+            />
+        </div>
+
+
+
+
+
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input
+                        class="input"
+                        type="email"
+                        placeholder="Email"
+                        name="Email"
+                />
+            </div>
+        </div>
+
+
+        <!--    <div class="form-group">-->
+        <!--      <label for="employmentStatus">Employment Status</label>-->
+        <!--      <select id="employmentStatus" required>-->
+        <!--        <option value="salaried">Salaried</option>-->
+        <!--        <option value="self-employed">Self-Employed</option>-->
+        <!--        <option value="student">Student</option>-->
+        <!--      </select>-->
+        <!--    </div>-->
+
+
+
+        <!--    <div class="form-buttons">-->
+        <!--      <input type="submit" value="Submit">-->
+        <!--      <input type="reset" value="Cancel">-->
+        <!--    </div>-->
+
+        <div class="field">
+            <label class="label">Additional Information</label>
+            <div class="control">
+          <textarea
+                  class="textarea"
+                  placeholder="Any additional information"
+                  name="Notes"
+          ></textarea>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-primary" type="submit" id="submit-button">
+                    Save
+                </button>
+            </div>
+            <div class="control">
+                <!--      <button class="button is-danger">Cancel</button>-->
+            </div>
+        </div>
+</form>
+<div
+        id="message"
+        style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: green;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: aquamarine;
+      "
+></div>
+
+<script src="request.js"></script>
+
+
 </body>
 </html>
