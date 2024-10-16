@@ -36,7 +36,7 @@
         .then(function (data) {
           // Display a success message
           document.getElementById("message").textContent =
-            "Data submitted successfully!";
+            "Booking successfully!";
           document.getElementById("message").style.display = "block";
           document.getElementById("message").style.backgroundColor = "green";
           document.getElementById("message").style.color = "beige";
