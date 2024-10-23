@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Set the body background */
+body {
+  background-color: white;
+  color: #333; /* Changed to dark color for better contrast */
+}
+
+/* Styling for the hero section */
+.hero.is-primary {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass effect for the form container */
+form.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px; /* Reduced max-width for mobile */
+  width: 90%; /* Responsive width */
+  margin: 50px auto;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Style for the title */
+.hero .title {
+  font-size: 2.5rem;
+  color: #ff2403;
+}
+
+/* Input field styling */
+.input,
+.textarea {
+  border: none; /* Ensure input borders are defined */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+  width: 100%; /* Ensure the input takes up the full width */
+  margin-bottom: 10px; /* Added margin for vertical spacing */
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #999;
+}
+
+.field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Stack labels and inputs vertically */
+}
+
+/* Label Styling */
+.label {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px; /* Add spacing between label and input */
+  text-align: left; /* Ensure label text aligns left */
+}
+
+/* Pink button styling */
+.button.is-primary {
+  background-color: #FF2403;
+  border-color: #ff6bcb;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px; /* Adjusted for a slightly rounded look */
+  box-shadow: 0 8px 8px rgba(255, 107, 203, 0.3);
+  transition: all 0.3s ease;
+  padding: 12px 20px; /* Increased padding for larger button size */
+  font-size: 1.1rem; /* Increased font size */
+  width: 100%; /* Make button full width */
+}
+
+.button.is-primary:hover {
+  background-color: #FD4161;
+  box-shadow: 0 6px 12px rgba(255, 107, 203, 0.5);
+}
+
+/* Center the button */
+.field.is-grouped {
+  text-align: center; /* Center the inline elements */
+  margin-top: 20px; /* Optional: Add space above the button group */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  form.container {
+    padding: 15px; /* Reduced padding on mobile */
+    width: 90%; /* Use more width on smaller screens */
+    max-width: 400px; /* Keep max-width for mobile */
+  }
+
+  .hero .title {
+    font-size: 2rem; /* Smaller title size on mobile */
+  }
+
+  /* Adjust input and button sizes on mobile */
+  .input,
+  .textarea,
+  .button.is-primary {
+    font-size: 1rem; /* Slightly smaller font size for inputs and button */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
