@@ -3,10 +3,8 @@
 <html>
 
 <head>
-  <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-  />
+  <title>booking</title>
+  <link rel="stylesheet" href="css/booking.css">
 </head>
 
 <body>
@@ -14,7 +12,7 @@
 <section class="hero is-primary is-bold">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">Booking</h1>
+      <!--<h1 class="Booking">Booking</h1>-->
     </div>
   </div>
 </section>
@@ -36,12 +34,16 @@
     <label class="label">Mobile Number*</label>
     <input
             class="input"
-            type="text"
+            type="tel"
             placeholder="Mobile Number"
             name="Mobile"
+            pattern="[6-9]{1}[0-9]{9}"
+            minlength="10"
+            maxlength="10"
             required
-    />
+            oninput="this.value = this.value.replace(/[^0-9]/g, '');"  <!-- Restrict non-numeric input -->
   </div>
+
 
   <div class="field">
     <label class="label">Email ID Send booking details to</label>
@@ -55,14 +57,14 @@
     </div>
   </div>
 
-   <div class="field">
+  <div class="field">
     <label class="label">Address</label>
     <div class="control">
       <input
-        class="input"
-        type="text"
-        placeholder="address"
-          name="Address"
+              class="input"
+              type="text"
+              placeholder="address"
+              name="Address"
       />
     </div>
   </div>
@@ -71,11 +73,12 @@
     <label class="label">When should the professional arrive?</label>
     <div class="control">
       <input
+              id="date-input"
               class="input"
               type="date"
               placeholder="Slot"
               name="Slot"
-      />
+              min="" <!-- Will be dynamically set to today's date -->
     </div>
   </div>
 
@@ -90,42 +93,48 @@
     </div>
   </div>
 
-<!--  <div class="field">-->
-<!--    <label class="label">Agree to Terms</label>-->
-<!--    <div class="control">-->
-<!--      <label class="checkbox">-->
-<!--        <input type="checkbox" name="Agree To Terms" value="yes" /> I agree-->
-<!--        to the terms and conditions-->
-<!--      </label>-->
-<!--    </div>-->
-<!--  </div>-->
+  <!--  <div class="field">-->
+  <!--    <label class="label">Agree to Terms</label>-->
+  <!--    <div class="control">-->
+  <!--      <label class="checkbox">-->
+  <!--        <input type="checkbox" name="Agree To Terms" value="yes" /> I agree-->
+  <!--        to the terms and conditions-->
+  <!--      </label>-->
+  <!--    </div>-->
+  <!--  </div>-->
 
   <div class="field is-grouped">
     <div class="control">
       <button class="button is-primary" type="submit" id="submit-button">
-        submit
+        Submit
       </button>
     </div>
-<!--    <div class="control">-->
-<!--      <button class="button is-danger">Clear</button>-->
-<!--    </div>-->
   </div>
-</form>
-<div
-        id="message"
-        style="
-        display: none;
-        margin: 20px;
-        font-weight: bold;
-        color: green;
-        padding: 8px;
-        background-color: beige;
-        border-radius: 4px;
-        border-color: aquamarine;
-      "
-></div>
 
-<script src="js/booking.js"></script>
+  <div
+          id="message"
+          style="
+    display: none;
+    margin-top: 10px;
+    font-weight: bold;
+    color: beige;
+    background-color: green;
+    padding: 10px;
+    border-radius: 4px;
+    width: auto;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  "
+  ></div>
+
+  <script src="assets/js/booking.js"></script>
+  <script>
+  // Get today's date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];
+
+  // Set the min attribute of the date input to today's date
+  document.getElementById('date-input').setAttribute('min', today);
+</script>
 
 </body>
 </html>
