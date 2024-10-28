@@ -9,7 +9,7 @@
 /* Set the body background */
 body {
   background-color: white;
-  color: #333; /* Changed to dark color for better contrast */
+  color: #1e272e; /* Changed to dark color for better contrast */
 }
 
 /* Styling for the hero section */
@@ -36,7 +36,7 @@ form.container {
 /* Style for the title */
 .hero .title {
   font-size: 2.5rem;
-  color: #ff2403;
+  color: #ff3f34;
 }
 
 /* Input field styling */
@@ -66,7 +66,7 @@ form.container {
 
 /* Label Styling */
 .label {
-  color: #333;
+  color: #1e272e;
   font-weight: bold;
   margin-bottom: 5px; /* Add spacing between label and input */
   text-align: left; /* Ensure label text aligns left */
@@ -74,8 +74,8 @@ form.container {
 
 /* Pink button styling */
 .button.is-primary {
-  background-color: #FF2403;
-  border-color: #ff6bcb;
+  background-color: #ff3f34;
+  border-color: #d2dae2;
   color: white;
   font-weight: bold;
   border-radius: 5px; /* Adjusted for a slightly rounded look */
@@ -87,7 +87,7 @@ form.container {
 }
 
 .button.is-primary:hover {
-  background-color: #FD4161;
+  background-color: #ff3f34;
   box-shadow: 0 6px 12px rgba(255, 107, 203, 0.5);
 }
 
