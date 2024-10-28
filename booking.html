@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -12,10 +12,12 @@
 
   gtag('config', 'G-6ENN7HQYWZ');
 </script>
-
-  <title>booking</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking</title>
   <link rel="stylesheet" href="css/booking.css">
-
+  <!-- Google reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -23,12 +25,12 @@
 <section class="hero is-primary is-bold">
   <div class="hero-body">
     <div class="container">
-      <!--<h1 class="Booking">Booking</h1>-->
+      <!--<h1 class="title">Booking</h1>-->
     </div>
   </div>
 </section>
 
-<form id="form" class="container m-4 pl-4" method="POST">
+<form id="form" class="container m-4 pl-4" method="POST" onsubmit="return validateForm()">
   <div class="field">
     <label class="label">Name*</label>
     <div class="control">
@@ -37,6 +39,7 @@
               type="text"
               placeholder="Your Name"
               name="Customer Name"
+              required
       />
     </div>
   </div>
@@ -52,36 +55,38 @@
             minlength="10"
             maxlength="10"
             required
-            oninput="this.value = this.value.replace(/[^0-9]/g, '');"  <!-- Restrict non-numeric input -->
+            oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+    />
   </div>
 
-
   <div class="field">
-    <label class="label">Email ID Send booking details to</label>
+    <label class="label">Email ID Send booking details to*</label>
     <div class="control">
       <input
               class="input"
               type="email"
               placeholder="Your Email"
               name="Email"
+              required
       />
     </div>
   </div>
 
   <div class="field">
-    <label class="label">Address</label>
+    <label class="label">Address*</label>
     <div class="control">
       <input
               class="input"
               type="text"
-              placeholder="address"
+              placeholder="Address"
               name="Address"
+              required
       />
     </div>
   </div>
 
   <div class="field">
-    <label class="label">When should the professional arrive?</label>
+    <label class="label">When should the professional arrive?*</label>
     <div class="control">
       <input
               id="date-input"
@@ -89,30 +94,25 @@
               type="date"
               placeholder="Slot"
               name="Slot"
-              min="" <!-- Will be dynamically set to today's date -->
+              min=""
+              required
+      />
     </div>
   </div>
 
   <div class="field">
     <label class="label">Your Message here</label>
     <div class="control">
-          <textarea
-                  class="textarea"
-                  placeholder="Please provide key problem details or requirements you'd like us to solve"
-                  name="Notes"
-          ></textarea>
+      <textarea
+              class="textarea"
+              placeholder="Please provide key problem details or requirements you'd like us to solve"
+              name="Notes"
+      ></textarea>
     </div>
   </div>
 
-  <!--  <div class="field">-->
-  <!--    <label class="label">Agree to Terms</label>-->
-  <!--    <div class="control">-->
-  <!--      <label class="checkbox">-->
-  <!--        <input type="checkbox" name="Agree To Terms" value="yes" /> I agree-->
-  <!--        to the terms and conditions-->
-  <!--      </label>-->
-  <!--    </div>-->
-  <!--  </div>-->
+  <!-- Google reCAPTCHA v2 -->
+  <div class="g-recaptcha" data-sitekey="6LdvKGoqAAAAABxiAGkzADiUfsv2M-o1JMbGgSpK"></div>
 
   <div class="field is-grouped">
     <div class="control">
@@ -124,28 +124,12 @@
 
   <div
           id="message"
-          style="
-    display: none;
-    margin-top: 10px;
-    font-weight: bold;
-    color: beige;
-    background-color: green;
-    padding: 10px;
-    border-radius: 4px;
-    width: auto;
-    max-width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  "
+          style="display: none; margin-top: 10px; font-weight: bold; color: beige; background-color: green; padding: 10px; border-radius: 4px; width: auto; max-width: 100%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);"
   ></div>
+  <script src="js/captcha.js"></script>
+  <script src="js/booking.js"></script>
 
-  <script src="assets/js/booking.js"></script>
-  <script>
-  // Get today's date in YYYY-MM-DD format
-  const today = new Date().toISOString().split('T')[0];
-
-  // Set the min attribute of the date input to today's date
-  document.getElementById('date-input').setAttribute('min', today);
-</script>
 
 </body>
+
 </html>
