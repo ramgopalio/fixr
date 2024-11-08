@@ -15,6 +15,6 @@ Innovative Design: Unique, eye-catching designs tailored to your brand.
 
 Follow Us for Updates:
 Be the first to know when we launch! Follow us on our social media channels to get the latest news, special offers, and exclusive early access.
-@fixer.company
+@fixr.company
 
 Got questions or want to collaborate? Reach out to us at Email- help@fixr.company
