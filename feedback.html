@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ENN7HQYWZ"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6ENN7HQYWZ');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking</title>
+  <link rel="stylesheet" href="css/booking.css">
+
+<!--  <script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
+</head>
+
+<body>
+
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+<!--      <h1 class="title">Booking</h1>-->
+    </div>
+  </div>
+</section>
+
+<form id="form" class="container m-4 pl-4" method="POST" onsubmit="return validateForm()">
+  <div class="container">
+          <h1 class="title">Your Feedback Matters</h1>
+    <br>
+    <p style="font-style:oblique ; font-size: smaller;">We want to offer the best service experience out there. <br>Your satisfaction is our top priority, and your feedback helps us to continually improve and innovate.</p>  </div>
+
+    <br>
+  <div class="field">
+    <label class="label">Name*</label>
+    <div class="control">
+      <input
+              class="input"
+              type="text"
+              placeholder="Your Name"
+              name="Customer Name"
+              required
+      />
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Mobile Number*</label>
+    <input
+            class="input"
+            type="tel"
+            placeholder="Mobile Number"
+            name="Mobile"
+            pattern="[6-9]{1}[0-9]{9}"
+            minlength="10"
+            maxlength="10"
+            required
+            oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+    />
+  </div>
+
+<!--  <div class="field">-->
+<!--    <label class="label">Email ID </label>-->
+<!--    <div class="control">-->
+<!--      <input-->
+<!--              class="input"-->
+<!--              type="email"-->
+<!--              placeholder="Your Email"-->
+<!--              name="Email"-->
+<!--              required-->
+<!--      />-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+  <div class="field">
+    <label class="label">Message*</label>
+    <div class="control">
+      <textarea
+              class="textarea"
+              placeholder="Enter your feedback"
+              name="Notes"
+              required
+      ></textarea>
+    </div>
+  </div>
+
+
+<!--  <div class="g-recaptcha" data-sitekey="6LdvKGoqAAAAABxiAGkzADiUfsv2M-o1JMbGgSpK"></div>-->
+
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button class="button is-primary" type="submit" id="submit-button">
+        Submit
+      </button>
+    </div>
+  </div>
+
+  <div
+          id="message"
+          style="display: none; margin-top: 10px; font-weight: bold; color: beige; background-color: green; padding: 10px; border-radius: 4px; width: auto; max-width: 100%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);"
+  ></div>
+<!--  <script src="js/captcha.js"></script>-->
+  <script src="js/feedback.js"></script>
+
+
+</body>
+
+</html>
